@@ -2,18 +2,25 @@
     Mobile: 375px;
     Desktop: 1440px
 */
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   /* 500 and 700 */
   font-size: 13px;
   color: #48556a;
@@ -22,30 +29,25 @@ body {
 
 .image {
   width: 100%;
-  height: 40%;
+  height: 30vh;
   margin: 0 auto;
-  overflow: hidden;
 }
 
-.image img {
-  width: 100%;
-  border-radius: .5rem .5rem 0 0;
+.image-pic {
+  background-image: url(../images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  height: 100%;
 }
 
 .container {
   margin: 5rem 10rem 2rem;
   background: #fff;
-  border-radius: .75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border-radius: 0.75rem;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-shadow: 0 0 25px #9eafc2;
-          box-shadow: 0 0 25px #9eafc2;
+  flex-direction: column;
+  box-shadow: 0 0 25px #9eafc2;
 }
 
 .callout-text {
@@ -58,18 +60,14 @@ body {
 .body-text {
   padding: 0 2.2rem 1.5rem;
   line-height: 1.6;
-  letter-spacing: .07rem;
+  letter-spacing: 0.07rem;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 1rem 2.2rem 1rem;
-  border-radius: 0 0 .75rem .75rem;
+  border-radius: 0 0 0.75rem 0.75rem;
   min-height: 5rem;
 }
 
@@ -94,12 +92,8 @@ footer .social-icons {
 }
 
 .footer-dark .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .footer-dark .social {
@@ -111,7 +105,7 @@ footer .social-icons {
   fill: #48556a;
   color: #ecf2f8;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   justify-self: flex-start;
 }
 
@@ -122,16 +116,9 @@ footer .social-icons {
 }
 
 .photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .photo img {
@@ -146,7 +133,7 @@ footer .social-icons {
 
 .name-date .name {
   font-weight: 700;
-  margin-bottom: .125rem;
+  margin-bottom: 0.125rem;
 }
 
 .share {
@@ -176,34 +163,22 @@ svg.icon {
 
 @media (min-width: 900px) {
   .container {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "image text" "image footer";
+    grid-template-areas: "image text" "image footer";
   }
   .image {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
     grid-area: image;
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
+    width: 30vw;
     height: auto;
   }
-  .image img {
-    border-radius: .5rem 0 0 .5rem;
-    display: block;
-    height: 100%;
+  .image-pic {
+    background-position-x: left;
   }
   .all-text {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
     grid-area: text;
     margin-top: 5%;
   }
   footer {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
     grid-area: footer;
   }
   .footer-dark {
@@ -217,18 +192,16 @@ svg.icon {
     display: inline-block;
   }
   .footer-dark .social-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: absolute;
     left: 75%;
     margin-top: -140px;
     background-color: #48556a;
     padding: 2rem 1.5rem;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
   }
   .footer-dark .social-icons::after {
-    content: '';
+    content: "";
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
