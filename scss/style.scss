@@ -27,7 +27,6 @@ p {
 }
 body {
     font-family: "Manrope", sans-serif; /* 500 and 700 */
-    font-size: 13px;
     color: $dark-grey;
     background-color: $background;
 }
@@ -39,7 +38,7 @@ body {
 .image-pic {
     background-image: url(../images/drawers.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 5%;
     background-size: cover;
     height: 100%;
 }
@@ -55,17 +54,18 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 2.5rem 2.2rem 1.2rem;
-    line-height: 1.4;
+    line-height: 1.35;
 }
 .body-text {
+    font-size: 13px;
     padding: 0 2.2rem 1.5rem;
-    line-height: 1.6;
+    line-height: 1.65;
     letter-spacing: 0.07rem;
 }
 footer {
     display: flex;
     align-items: center;
-    padding: 1rem 2.2rem 1rem;
+    padding: 1rem 2.2rem 1.25rem;
     border-radius: 0 0 0.75rem 0.75rem;
     min-height: 5rem;
     .social-icons {
@@ -108,6 +108,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: flex-start;
 }
 .photo img {
     border-radius: 50%;
@@ -154,20 +155,25 @@ svg.icon {
         height: auto;
     }
     .image-pic {
-        background-position-x: left;
+        background-position: left top;
     }
     .all-text {
         grid-area: text;
-        margin-top: 5%;
+        margin-top: 0;
     }
     footer {
         grid-area: footer;
+        .photo {
+            display: inline-block;
+            align-self: auto;
+        }
     }
     .footer-dark {
         background-color: $white;
         position: relative;
         .photo {
             display: inline-block;
+            align-self: center;
         }
         .name-date {
             display: inline-block;
